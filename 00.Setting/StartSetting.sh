@@ -1,0 +1,2 @@
+./InstallPackage.sh
+./Configure.sh

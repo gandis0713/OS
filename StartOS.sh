@@ -1,5 +1,7 @@
 #!/bin/bash
 
+make all
+
 OSPID="$(pgrep -a qemu)"
 kill -9 $OSPID
 
