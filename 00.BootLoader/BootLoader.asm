@@ -31,7 +31,7 @@ SCREEN_CLEAR_LOOP:
 MESSAGE_LOOP:
     mov cl, byte [ si + MESSAGE ]
 
-    cmp cl, 'n'
+    cmp cl, 0
     je MESSAGE_END
 
     mov byte[es : di], cl

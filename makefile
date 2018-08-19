@@ -1,5 +1,7 @@
 all: clean BootLoader Disk.img Hexdump
 
+build: BootLoader Disk.img Hexdump
+
 BootLoader:
 	make -C 00.BootLoader
 
