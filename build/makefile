@@ -7,12 +7,15 @@ BOOTLOADER:
 
 OUT:
 	# create out directory
-	../src/common/create_directory.sh ../out
+	mkdir -p ../out
+
 	# copy binary file
 	cp ../src/bootloader/out/bootloader.bin  ../out/
+	
 	# create install image
 	#	 flopy type
 	dd if=../out/bootloader.bin of=../out/OS.flp
+	
 	#	 ISO
 	mkisofs -no-emul-boot -boot-load-size 4 -o ../out/OS.iso -b bootloader.bin ../out/
 
