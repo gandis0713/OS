@@ -1,6 +1,6 @@
 #!/bin/bash
 
-make REBUILD
+make -C build REBUILD
 
 OSPID="$(pgrep -a qemu)"
 kill -9 $OSPID
