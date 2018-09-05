@@ -1,12 +1,12 @@
-REBUILD: CLEAN BUILD
+all: clean build
 
-BUILD: INITIALIZE BOOTLOADER
+build: initialize bootloader
 
-INITIALIZE:
+initialize:
 	mkdir -p out
 
-BOOTLOADER:
+bootloader:
 	nasm -o out/bootloader.bin bootloader.asm
 
-CLEAN:
+clean:
 	rm -rf out/

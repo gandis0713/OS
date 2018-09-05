@@ -1,11 +1,11 @@
-REBUILD: CLEAN BUILD
+all: clean build 
 
-BUILD: BOOTLOADER OUT
+build: bootloader out
 
-BOOTLOADER:
+bootloader:
 	make -C ../src/bootloader
 
-OUT:
+out:
 	# create out directory
 	mkdir -p ../out
 
@@ -19,6 +19,6 @@ OUT:
 	#	 ISO
 	mkisofs -no-emul-boot -boot-load-size 4 -o ../out/OS.iso -b bootloader.bin ../out/
 
-CLEAN:
-	make -C ../src/bootloader CLEAN
+clean:
+	make -C ../src/bootloader clean
 	rm -rf ../out/
