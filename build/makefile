@@ -1,3 +1,5 @@
+MODE=release
+
 all: clean build 
 
 build: bootloader out
@@ -18,6 +20,10 @@ out:
 	
 	#	 ISO
 	mkisofs -no-emul-boot -boot-load-size 4 -o ../out/OS.iso -b bootloader.bin ../out/
+
+ifeq ($(MODE), debug)
+	cat .gdbinit > ~/.gdbinit
+endif
 
 clean:
 	make -C ../src/bootloader clean
