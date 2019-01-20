@@ -7,3 +7,6 @@
 - Platform : x86_64 
 - Core : Multi
 
+## Tools
+- nasm
+
