@@ -1,5 +1,5 @@
 # set gdb configuration
 rm -f ~/.gdbinit
 
-ln -s $(pwd)/.gdbinit ~/.gdbinit
+ln -s $(pwd)/../.gdbinit ~/.gdbinit
 
