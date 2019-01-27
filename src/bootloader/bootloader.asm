@@ -1,5 +1,5 @@
-[bits 16]
 [org 0x0000]
+[bits 16]
 
 jmp 0x07C0:Initialize	; set Code Segment address to 0x7C00. master boot record is loaded at 0x7C00.
 						; however set 0x07C0 here. because of physical address is calculated 4 bit to the left shift.  
